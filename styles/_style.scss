@@ -1,0 +1,14 @@
+@use "./variables/colors" as *;
+@use "./variables/mediaQuery" as *;
+@use "./mixins" as *;
+@use "./fonts" as *;
+@use "./global" as *;
+$padding: 1.5rem;
+$gap: 1rem;
+$gap-1: 7rem;
+$gap-2: 28vh;
+$gap-3: 2vh;
+$gap-4: 0.5rem;
+$border-radius: 1.25rem;
+$width: 25%;
+

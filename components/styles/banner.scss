@@ -1,0 +1,64 @@
+@use "../../styles/variables/colors" as *;
+@use "../../styles/variables/mediaQuery" as *;
+.banner {
+  background: $gradient;
+  padding: 60px;
+  .brand_lists {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: inline mandatory;
+    padding-block-end: 30px;
+    img {
+      max-width: 90px !important;
+      height: 90px !important;
+    }
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      outline: 3px solid $secondColor;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $secondColor;
+    }
+    &::-webkit-scrollbar-button {
+      width: calc(25% - 50px);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 20px;
+    .brand_lists{
+      gap: 20px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    .brand_lists{
+      gap: 60px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    .brand_lists{
+      gap: 88px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner {
+    .brand_lists{
+      gap: 113px;
+    }
+  }
+}

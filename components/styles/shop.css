@@ -1,0 +1,260 @@
+:root {
+  /**
+         * colors
+         */
+  --rich-black-fogra-29_95: hsla(222, 18%, 11%, 0.95);
+  --raisin-black-1: hsl(0, 0%, 16%);
+  --raisin-black-2: hsl(236, 17%, 17%);
+  --raisin-black-3: hsl(280, 11%, 11%);
+  --raisin-black-4: hsl(280, 8%, 15%);
+  --english-violet: hsl(274, 21%, 23%);
+  --eerie-black-1: hsl(277, 25%, 10%);
+  --eerie-black-2: hsl(280, 7%, 8%);
+  --roman-silver: hsl(220, 6%, 59%);
+  --quick-silver: hsl(0, 1%, 65%);
+  --light-gray-1: hsl(0, 0%, 80%);
+  --light-gray-2: hsl(0, 2%, 82%);
+  --marigold_75: hsla(42, 99%, 46%, 0.75);
+  --xiketic_90: hsla(280, 37%, 8%, 0.9);
+  --cultured-2: hsl(0, 0%, 97%);
+  --marigold: hsl(42, 99%, 46%);
+  --platinum: hsl(0, 0%, 89%);
+  --dim-gray: hsl(0, 0%, 42%);
+  --white_15: hsla(0, 0%, 100%, 0.15);
+  --white_10: hsla(0, 0%, 100%, 0.1);
+  --xiketic: hsl(277, 25%, 10%);
+  --silver: hsl(0, 0%, 78%);
+  --white: hsl(0, 0%, 100%);
+  --jet: hsl(236, 13%, 23%);
+  /**
+         * typography
+         */
+  --ff-oxanium: "Oxanium", cursive;
+  --ff-poppins: "Poppins", sans-serif;
+  --fs-1: 7rem;
+  --fs-2: 4.5rem;
+  --fs-3: 3.6rem;
+  --fs-4: 2.4rem;
+  --fs-5: 2.2rem;
+  --fs-6: 2rem;
+  --fs-7: 1.6rem;
+  --fs-8: 1.5rem;
+  --fs-9: 1.4rem;
+  --fs-10: 1.3rem;
+  --fs-11: 1.2rem;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  /**
+         * spacing
+         */
+  --section-padding: 120px;
+  /**
+         * gradient
+         */
+  --gradient: radial-gradient(circle, hsl(250, 7%, 17%), hsl(250, 11%, 11%));
+  /**
+         * box shadow
+         */
+  --shadow-1: 0px 2px 8px 0px hsla(0, 0%, 0%, 0.2),
+    inset 0px 2px 8px 0px hsla(0, 0%, 0%, 0.4);
+  --shadow-2: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.4);
+  --shadow-3: 0px 5px 10px 1px hsla(219, 98%, 17%, 0.2);
+  --shadow-4: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.15);
+  /**
+         * transition
+         */
+  --transition: 0.25s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+.center {
+  position: relative;
+  z-index: 1;
+  background-color: var(--white);
+}
+.center::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 57%;
+  background-image: url("/images/section-wrapper-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+.center .shop {
+  z-index: 100;
+  z-index: 2;
+}
+.center .shop .title_container {
+  color: #fff;
+  text-transform: uppercase;
+}
+.center .shop .has-scrollbar {
+  margin-top: 40px;
+}
+.center .shop .has-scrollbar .latest-game-card {
+  position: relative;
+  box-shadow: var(--shadow-2);
+}
+.center .shop .has-scrollbar .latest-game-card .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--xiketic_90);
+  padding: 35px 25px;
+}
+.center .shop .has-scrollbar .latest-game-card .card-badge {
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+}
+.center .shop .has-scrollbar .latest-game-card .card-title {
+  margin-block-end: 12px;
+  transition: var(--transition);
+}
+.center .shop .has-scrollbar .latest-game-card .card-title:is(:hover, :focus) {
+  color: hsl(42, 99%, 46%);
+}
+.center .shop .has-scrollbar .latest-game-card .card-price {
+  color: var(--silver);
+  font-size: var(--fs-10);
+  font-weight: var(--fw-600);
+}
+.center .shop .has-scrollbar .latest-game-card .card-price .spam {
+  margin-inline-start: 5px;
+}
+.center .live {
+  z-index: 100;
+}
+.center .live .section-title {
+  color: #fff;
+  text-transform: uppercase;
+}
+.center .live .live-match {
+  position: relative;
+  overflow: hidden;
+  margin: 70px 0 -71px 0;
+}
+.center .live .live-match .live-match-banner {
+  position: relative;
+  background-color: var(--light-gray-1);
+  overflow: hidden;
+  box-shadow: var(--shadow-3);
+  padding: 0;
+  border-radius: 6px;
+}
+.center .live .live-match .live-match-banner img {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+.center .live .live-match .live-match-banner .play-btn {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  color: hsl(42, 99%, 46%);
+  position: absolute;
+}
+.center .live .live-match .live-match-banner .play-btn .play-icon {
+  width: 60px;
+  height: 60px;
+}
+.center .live .live-match-player {
+  margin-top: 50px;
+  position: relative;
+  padding-block-start: var(--section-padding);
+  z-index: 1;
+  justify-content: center;
+}
+.center .live .live-match-player::after {
+  content: "LIVE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-size: 15rem;
+  font-weight: 600;
+  color: var(--cultured-2);
+  z-index: -1;
+}
+.center .live .live-match-player .player {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.center .live .live-match-player .live-match-details {
+  margin-block: 50px;
+}
+.center .live .live-match-player .live-match-subtitle {
+  background-color: var(--marigold);
+  color: var(--white);
+  font-size: var(--fs-9);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  letter-spacing: 2px;
+  padding: 4px 20px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 30px;
+}
+.center .live .live-match-player .live-match-time {
+  color: var(--xiketic);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-700);
+  margin-inline: auto;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .shop .container {
+    padding: 85px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shop .container .has-scrollbar {
+    margin-top: 74px;
+  }
+  .shop .container .has-scrollbar .scrollbar-item {
+    min-width: 50%;
+  }
+  .live .live-match-player::after {
+    font-size: 33rem !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .shop .has-scrollbar .scrollbar-item {
+    min-width: 30.33% !important;
+  }
+  .live {
+    padding-block: 50px;
+  }
+  .live .live-match {
+    width: 70%;
+    margin: 88px auto -71px auto !important;
+  }
+  .live .live-match-player {
+    display: flex;
+    gap: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .live .live-match-player {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+  }
+  .live .live-match-player .live-match-banner {
+    width: 650px !important;
+  }
+  .shop .container {
+    padding: 40px;
+  }
+}/*# sourceMappingURL=shop.css.map */
